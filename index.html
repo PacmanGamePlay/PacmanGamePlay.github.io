@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -55,37 +55,27 @@
     <div id="wrapper">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="col-lg-12 col-lg-pull-1">
                     <img src="assets/img/logo.png" alt="Scoop Themes Logo">
-                    <br/>
-                    <br/>
-                    <h2 class="subtitle">Сайт находится в разработке и в скором вермени будет готов</h2>
-                    <br/>
-             
-                    <form class="form-inline validate signup" action="http://scoopthemes.us8.list-manage.com/subscribe/post-json?u=c535e62cabdc2bfeb87bff6de&amp;id=d969b07f82&c=?" method="get" role="form">
-                        <div class="form-group">
-                            <input type="email" class="form-control" name="EMAIL" id="exampleInputEmail1" placeholder="Enter your email address">
-                        </div>
-                        <input type="submit" name="subscribe" value="Get notified!" class="btn btn-theme">
-                    </form>
-                    <br/>
                 </div>
-                <div class="col-sm-12 align-center">
-                    <ul class="social-network social-circle">
-                        <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#" class="icoGit" title="Github"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
+                <div class="col-lg-12">
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <h2 class="subtitle">Сайт находится в разработке и в скором вермени будет готов</h2>
+                    <br />
+                    <br />
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-3">
-                    <p class="copyright">Copyright &copy; 2019 - <a href="https://vk.com/hytalemain">HytaleMain</a>
+                    <br />
+                    <br />
+                    <br />
+                    <p class="copyright">
+                        Copyright &copy; 2019 - <a href="https://vk.com/hytalemain">HytaleMain</a>
                     </p>
                 </div>
             </div>
@@ -111,32 +101,7 @@ $(document).ready( function () {
     }
 });
 
-function appendResult(userText , className, iconClass){
-  var resultHTML = "<div class='stretchLeft result "+ className + "'>" + userText + " <span class='fa fa-" + iconClass + "'></span>" + "</div>";
-  $('body').append(resultHTML);
-  $('.result').delay(10000).fadeOut('1000');
-}
 
-
-function register($form) {
-    $.ajax({
-        type: $form.attr('method'),
-        url: $form.attr('action'),
-        data: $form.serialize(),
-        cache       : false,
-        dataType    : 'json',
-        contentType: "application/json; charset=utf-8",
-        error       : function(err) { alert("Could not connect to the registration server. Please try again later."); },
-        success     : function(data) {
-            if (data.result != "success") {
-                appendResult('Wrong Email Or You Are Already Registered, Try Again', 'error', 'exclamation');
-            } else {
-                // It worked, carry on...
-                appendResult('Successful, Check Your Email For Confirmation ', 'success', 'check');
-            }
-        }
-    });
-}
     </script>
 
 </body>
