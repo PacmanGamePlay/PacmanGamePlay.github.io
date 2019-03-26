@@ -33,7 +33,7 @@ h4 {
 
 p {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 24px;
 }
 
 
@@ -156,7 +156,7 @@ form.signup input.form-control:focus {
 
 h2.subtitle {
 	color: #fff;
-	font-size: 24px;
+	font-size: 40px;
 }
 
 /* countdown */
